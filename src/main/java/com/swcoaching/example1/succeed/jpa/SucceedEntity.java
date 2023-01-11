@@ -19,6 +19,6 @@ public class SucceedEntity {
     private LocalDateTime createdAt;
 
 //    @ManyToOne
-//    @JoinColumn(name = "goal")
+//    @JoinColumn(name = "goal_id")
 //    private GoalEntity goal;
 }
