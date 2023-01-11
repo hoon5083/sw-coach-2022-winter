@@ -3,7 +3,7 @@ server:
 
 spring.datasource:
   driver-class-name: org.mariadb.jdbc.Driver
-  url: jdbc:mariadb://127.0.0.1:3306/testdb
+  url: jdbc:mariadb://127.0.0.1:33306/testdb
   username: skku
   password: skku
 
