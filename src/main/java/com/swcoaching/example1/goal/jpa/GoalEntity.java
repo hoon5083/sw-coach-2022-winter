@@ -1,5 +1,6 @@
 package com.swcoaching.example1.goal.jpa;
 
+import com.swcoaching.example1.user.jpa.UserEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 
@@ -17,7 +18,7 @@ public class GoalEntity {
     @Column(length = 20)
     private String category;
 
-//    @ManyToOne
-//    @JoinColumn
-//    private UserEntity user;
+    @ManyToOne
+    @JoinColumn
+    private UserEntity user;
 }

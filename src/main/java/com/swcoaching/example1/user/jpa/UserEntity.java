@@ -1,5 +1,7 @@
 package com.swcoaching.example1.user.jpa;
 
+import com.swcoaching.example1.friendship.jpa.FriendshipEntity;
+import com.swcoaching.example1.goal.jpa.GoalEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 
@@ -23,9 +25,12 @@ public class UserEntity {
     @Column(length = 10000)
     private String password;
 
-//    @OneToMany(mappedBy = "friendship")
-//    public List<FriendshipEntity> posts = new ArrayList<>();
+    @OneToMany(mappedBy = "sender")
+    public List<FriendshipEntity> sentFriendships = new ArrayList<>();
 
-//    @OneToMany(mappedBy = "Goal")
-//    public List<GoalEntity> posts = new ArrayList<>();
+    @OneToMany(mappedBy = "receiver")
+    public List<FriendshipEntity> receivedFriendships = new ArrayList<>();
+
+    @OneToMany(mappedBy = "user")
+    public List<GoalEntity> goals = new ArrayList<>();
 }

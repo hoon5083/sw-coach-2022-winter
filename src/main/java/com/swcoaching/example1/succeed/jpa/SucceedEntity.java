@@ -1,5 +1,6 @@
 package com.swcoaching.example1.succeed.jpa;
 
+import com.swcoaching.example1.goal.jpa.GoalEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -18,7 +19,7 @@ public class SucceedEntity {
     @Column(updatable = false, nullable = false)
     private LocalDateTime createdAt;
 
-//    @ManyToOne
-//    @JoinColumn
-//    private GoalEntity goal;
+    @ManyToOne
+    @JoinColumn
+    private GoalEntity goal;
 }
