@@ -16,13 +16,13 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 100)
+    @Column(length = 100, nullable = false)
     private String nickname;
 
-    @Column(length = 500)
+    @Column(length = 500, nullable = false)
     private String introduction;
 
-    @Column(length = 10000)
+    @Column(length = 10000, nullable = false)
     private String password;
 
     @OneToMany(mappedBy = "sender")

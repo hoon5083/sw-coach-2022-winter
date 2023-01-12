@@ -20,6 +20,6 @@ public class SucceedEntity {
     private LocalDateTime createdAt;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(nullable = false)
     private GoalEntity goal;
 }

@@ -12,13 +12,13 @@ public class GoalEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 100)
+    @Column(length = 100,nullable = false)
     private String title;
 
-    @Column(length = 20)
+    @Column(length = 20,nullable = false)
     private String category;
 
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(nullable = false)
     private UserEntity user;
 }
